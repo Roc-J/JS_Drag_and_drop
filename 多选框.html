@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function checkedAll(objName,flag){
+				var objNameList = document.getElementsByName(objName);
+				
+				if(flag==true){
+					if(null != objNameList){
+						for(var i =0;i<objNameList.length;i++){
+							objNameList[i].checked = 'checked';
+						}
+					}
+				}else {
+					if(null != objNameList){
+						for(var i =0;i<objNameList.length;i++){
+							objNameList[i].checked = '';
+						}
+					}
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		看书：<input type="checkbox" name="interesting" value="1" /><br />
+		写字：<input type="checkbox" name="interesting" value="2" /><br />
+		打飞机：<input type="checkbox" name="interesting" value="3" /><br />
+		玩游戏：<input type="checkbox" name="interesting" value="4" /><br />
+		<button type="button" onclick="checkedAll('interesting',true)">全选</button>
+		<button type="button" onclick="checkedAll('interesting',false)">全不选</button>
+	</body>
+</html>

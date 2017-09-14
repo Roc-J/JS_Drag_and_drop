@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS输出方式</title>
+	</head>
+	<body>
+		<h1>我的第一个页面</h1>
+		<p>这是一个段落</p>
+		<p id="demo"></p>
+		<script>
+			function windowsalert(){
+				window.alert("windows弹框方式");
+			}
+			function toinnerHTML(){
+				document.getElementById("demo").innerHTML = "插入一个段落";
+			}
+			function writeText(){
+				document.write("Today's date is " + new Date());
+			}
+			function consolelog(){
+				console.log("控制台输出");
+			}
+		</script>
+		<button type="button" onclick="windowsalert()">
+			窗口弹框
+		</button>
+		<button type="button" onclick="toinnerHTML()">
+			插入段落
+		</button>
+		<button type="button" onclick="writeText()">
+			写文档
+		</button>
+		<button type="button" onclick="consolelog()">
+			控制台输出
+		</button>
+	</body>
+</html>
